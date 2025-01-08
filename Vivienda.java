@@ -1,4 +1,4 @@
-public class Vivienda{
+ppublic class Vivienda{
     int metrosCuadrados, habitaciones;
     String direccion;
 
