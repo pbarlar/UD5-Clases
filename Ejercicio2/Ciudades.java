@@ -1,6 +1,6 @@
 package Ejercicio2;
 
-public class Cuidades {
+public class Ciudades {
     String nombreCiudad;
     int habitantes,territorio;
 }
