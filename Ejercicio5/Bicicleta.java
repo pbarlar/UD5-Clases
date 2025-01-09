@@ -5,4 +5,8 @@ public class Bicicleta {
     public static final String color="Negro";
     public static int marcha=2;
 
+    int getMarcha(){
+        return marcha;
+    }
+
 }
