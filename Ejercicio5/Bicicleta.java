@@ -14,11 +14,25 @@ public class Bicicleta {
         return marcha;
     }
 
-    void setAvanzar(int velocidad, int minutos){
-        float minutos2=minutos/60f;
-        double metrosAvanzados=velocidad*minutos2;
-        System.out.println("Has recorrido "+metrosAvanzados+" metros en "+minutos+" minutos.");
+    int getVelocidad(){
+        return velocidad;
     }
+    
+    void setMarcha(int vMarcha){
+        marcha=vMarcha;
+    }
+
+    void Avanzar(int avanza){
+        velocidad=avanza;
+        System.out.println("La bicicleta esta avanzando a "+velocidad+" por hora.");
+    }
+
+    void Frenar(int frena){
+        velocidad=frena;
+        System.out.println("La bicicleta esta frenando y va a "+velocidad+" por hora.");
+    }
+
+  
 
 
 }
