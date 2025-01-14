@@ -2,10 +2,7 @@ package Ejercicio5;
 
 public class Bicicleta {
     
-    /*Atibutos de clase */
-    public static final String color="Negro";
-    
-    /*Atributos de objeto */
+    public String color="Negro";
     public int velocidad;
     
     public int marcha;
