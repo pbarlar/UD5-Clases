@@ -5,6 +5,9 @@ class CrearBicicleta {
         Bicicleta miBicicleta=new Bicicleta();
         miBicicleta.marcha=4;
         System.out.println("El coche esta en "+miBicicleta.getMarcha()+" marcha");
+        
+        miBicicleta.setAvanzar(50, 10);
+       
     }
     
 }
