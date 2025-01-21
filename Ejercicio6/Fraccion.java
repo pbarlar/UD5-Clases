@@ -50,7 +50,29 @@ public class Fraccion {
         return (f3);
     }
 
-    static 
+    static Fraccion Simplificar(Fraccion f1){
+        int divisor,numerador,resto;
+        Fraccion f4=new Fraccion();
+        if (f1.getNumerador()>f1.getDenominador()) {
+            numerador=f1.getNumerador();
+            divisor=f1.getDenominador();
+        }else{
+            numerador=f1.getDenominador();
+            divisor=f1.getNumerador();
+        }
+
+       while (numerador%divisor!=0) {
+            if (numerador%divisor!=0) {
+                int temp=numerador;
+                numerador=divisor;
+                divisor=temp%divisor;
+            }else{
+                f4.setFraccion(numerador, divisor);
+                break;
+            }
+        }
+        return f4;
+    }
 
 
 
@@ -62,7 +84,7 @@ public class Fraccion {
         Fraccion f2=new Fraccion();
         Fraccion f3=new Fraccion();
         f1.setFraccion(3, 5);
-        f2.setFraccion(5, 2);
+        f2.setFraccion(8, 4);
         
         f1.Invertir();
         System.out.println(f1.getNumerador()+"/"+f1.getDenominador());
@@ -70,7 +92,8 @@ public class Fraccion {
         System.out.println("La multiplicación final es "+f3.getNumerador()+"/"+f3.getDenominador());
         f3=Fraccion.Dividir(f1, f2);
         System.out.println("La division final es "+f3.getNumerador()+"/"+f3.getDenominador());
-        
+        f3=Fraccion.Simplificar(f2);
+        System.out.println("La fracción simplificada es "+f3.getNumerador()+"/"+f3.getDenominador());
         
     }
 }
