@@ -51,26 +51,20 @@ public class Fraccion {
     }
 
     static Fraccion Simplificar(Fraccion f1){
-        int divisor,numerador,resto;
+        int divisor=Math.min(f1.getDenominador(), f1.getNumerador()),numerador=Math.max(f1.getDenominador(), f1.getNumerador());
+        int divisorog,numeradorog;
+        divisorog=divisor;
+        numeradorog=numerador;
         Fraccion f4=new Fraccion();
-        if (f1.getNumerador()>f1.getDenominador()) {
-            numerador=f1.getNumerador();
-            divisor=f1.getDenominador();
-        }else{
-            numerador=f1.getDenominador();
-            divisor=f1.getNumerador();
-        }
 
        while (numerador%divisor!=0) {
             if (numerador%divisor!=0) {
                 int temp=numerador;
                 numerador=divisor;
                 divisor=temp%divisor;
-            }else{
-                f4.setFraccion(numerador, divisor);
-                break;
             }
         }
+        f4.setFraccion(numeradorog/divisor, divisorog/divisor);
         return f4;
     }
 
@@ -84,7 +78,7 @@ public class Fraccion {
         Fraccion f2=new Fraccion();
         Fraccion f3=new Fraccion();
         f1.setFraccion(3, 5);
-        f2.setFraccion(8, 4);
+        f2.setFraccion(21, 7);
         
         f1.Invertir();
         System.out.println(f1.getNumerador()+"/"+f1.getDenominador());
