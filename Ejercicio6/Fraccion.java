@@ -3,19 +3,19 @@ package Ejercicio6;
 public class Fraccion {
    
    /*Atributos objeto  */
-    public int denominador,numerador;
+    int denominador,numerador;
     
 
     /*Metodos de objeto */
 
-    void setFraccion(int vdenominador,int vnumerador){
+    void setFraccion(int vnumerador,int vdenominador){
         denominador=vdenominador;
         numerador=vnumerador;
     }
 
     void Invertir(){
         int denominadorNuevo=numerador;
-        int numerador=denominador;
+        numerador=denominador;
         denominador=denominadorNuevo;
     }
 
@@ -50,6 +50,8 @@ public class Fraccion {
         return (f3);
     }
 
+    static 
+
 
 
 
@@ -62,7 +64,8 @@ public class Fraccion {
         f1.setFraccion(3, 5);
         f2.setFraccion(5, 2);
         
-        
+        f1.Invertir();
+        System.out.println(f1.getNumerador()+"/"+f1.getDenominador());
         f3=Fraccion.Multiplicar(f1, f2);
         System.out.println("La multiplicación final es "+f3.getNumerador()+"/"+f3.getDenominador());
         f3=Fraccion.Dividir(f1, f2);
