@@ -32,12 +32,17 @@ public class Pizza {
         return tipo;
     }
 
-    static void sirve(){
-        contadorServidas++;
-        estado="servida";
+    String getEstado(){
+        return estado;
     }
 
     void sirve(){
-        
+        contadorServidas++;
+        if (estado=="pedida") {
+            estado="servida";
+        }else{
+            System.out.println("La pizza ya esta servida.");
+        }
     }
+
 }
