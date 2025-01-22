@@ -36,6 +36,12 @@ public class Pizza {
         return estado;
     }
 
+    @Override
+    public String toString(){
+        return "pizza "+ tipo+" "+tamaño+","+estado;
+    }
+
+    
     void sirve(){
         contadorServidas++;
         if (estado=="pedida") {
@@ -43,6 +49,10 @@ public class Pizza {
         }else{
             System.out.println("La pizza ya esta servida.");
         }
+        
     }
+    
+    
+
 
 }
