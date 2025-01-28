@@ -63,7 +63,7 @@ public class Tiempo {
         if (this.segundos<0) {
             do {
                 this.segundos=this.segundos+60;
-                this.minutos=this.minutos+1;
+                this.minutos++;
             } while (this.segundos<0);
         }
         this.minutos=t1.minutos-t2.minutos-this.minutos;
@@ -71,9 +71,13 @@ public class Tiempo {
         if (this.minutos<0) {
             do {
                 this.minutos=this.minutos+60;
-                this.horas=this.horas+1;
+                this.horas++;
             } while (this.minutos<0);
         }
         this.horas=t1.horas-t2.horas-this.horas;
+
+        if (this.horas<0) {
+            this.horas=0;
+        }
     }
 }
