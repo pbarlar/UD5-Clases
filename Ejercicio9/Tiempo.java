@@ -55,4 +55,25 @@ public class Tiempo {
         }
         this.horas=t1.horas+t2.horas+this.horas;
     }
+
+
+    void resta(Tiempo t1, Tiempo t2){
+        this.segundos=t1.segundos-t2.segundos;
+        this.minutos=0;
+        if (this.segundos<0) {
+            do {
+                this.segundos=this.segundos+60;
+                this.minutos=this.minutos+1;
+            } while (this.segundos<0);
+        }
+        this.minutos=t1.minutos-t2.minutos-this.minutos;
+        this.horas=0;
+        if (this.minutos<0) {
+            do {
+                this.minutos=this.minutos+60;
+                this.horas=this.horas+1;
+            } while (this.minutos<0);
+        }
+        this.horas=t1.horas-t2.horas-this.horas;
+    }
 }
