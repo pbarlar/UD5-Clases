@@ -36,5 +36,23 @@ public class Tiempo {
         return horas+"h "+minutos+"m "+segundos+"s ";
     }
 
-    void suma ()
+    void suma(Tiempo t1, Tiempo t2){
+        this.segundos=t1.segundos+t2.segundos;
+        if (this.segundos>=60) {
+            do {
+                int temp=this.segundos-60;
+                this.minutos=this.minutos+1;
+                this.segundos=temp;
+            } while (this.segundos>=60);
+        }
+        this.minutos=t1.minutos+t2.minutos+this.minutos;
+        if (this.minutos>=60) {
+            do {
+                this.minutos=this.minutos-60;
+                this.horas=this.horas+1;
+               
+            } while (this.minutos>=60);
+        }
+        this.horas=t1.horas+t2.horas+this.horas;
+    }
 }
