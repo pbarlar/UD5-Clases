@@ -1,14 +1,14 @@
 package Ejercicio10;
 
 public class Incidencia {
-    int nincidencia;
+    int npuesto;
     static int incpendientes;
     String problema, solucion;
     boolean estado=false;
     
     /*Metodo de clase */
-    public Incidencia(int vincidencia , String vproblema){
-        nincidencia=vincidencia;
+    public Incidencia(int vpuesto , String vproblema){
+        npuesto=vpuesto;
         problema=vproblema;
         incpendientes++;
     }
@@ -29,9 +29,9 @@ public class Incidencia {
     @Override
     public String toString(){
         if (estado==false) {
-            return "Puesto: "+nincidencia+" - "+problema+"- Pendiente";
+            return "Puesto: "+npuesto+" - "+problema+"- Pendiente";
         }else{
-            return "Puesto: "+nincidencia+" - "+problema+"- Resuelto - "+solucion;
+            return "Puesto: "+npuesto+" - "+problema+"- Resuelto - "+solucion;
         }
     }
 }
